@@ -38,12 +38,14 @@ export const fetchDegreeRequests = async ({request, params}) =>{
     if(decodedName==="Dean UG Office"){
       statusFilter = "Pending at Dean UG Office"
     } else if(decodedName==="Registrar Office"){
-      statusFilter = "Pending at Registrar Office";
+      statusFilter = "Pending at Registrar's Office";
       approved = "Approved";
       rejected = "Rejected";
     } else if(decodedName==="Dean PG Office"){
       statusFilter = "Pending at Dean PG Office"
-    } 
+    }  else if(decodedName==="Controller of Examination"){
+      statusFilter = "Pending at Controller of Examination";
+    }
     else {
       statusFilter = "Pending at Department";
       departmentFilter = "Department of "

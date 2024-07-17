@@ -334,7 +334,7 @@ function MigrationRequestPage() {
             </div>
             <div className="buttons">
                 <div className="degreeOptions">
-                    <button onClick={handlePayment} disabled={!isDateFilled || isDisabled}>Pay</button>
+                    <button onClick={handlePayment} disabled={!isDateFilled || isDisabled || isPaymentDone}>Pay</button>
                     {!studentInfo.request
                         ?<button onClick={handleSubmit} disabled={isDisabled || !isPaymentDone}>Submit</button>
                         :<button onClick={handleStatus} disabled={isDisabled}>Check Status</button>}                

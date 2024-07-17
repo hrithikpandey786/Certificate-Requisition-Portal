@@ -33,18 +33,18 @@ export default function AdminDashboard(){
     }
   }
     
-    const [studentData, setStudentData] = React.useState([{
-        name: "Hrithik Pandey",
-        enrolmentNo: 2022071,
-        branch: "B.Tech",
-        status: "Requested"
-      },
-      {
-        name: "Anup",
-        enrolmentNo: 2022108,
-        branch: "MCA",
-        status: "Fulfilled"
-      }]);
+    // const [studentData, setStudentData] = React.useState([{
+    //     name: "Hrithik Pandey",
+    //     enrolmentNo: 2022071,
+    //     branch: "B.Tech",
+    //     status: "Requested"
+    //   },
+    //   {
+    //     name: "Anup",
+    //     enrolmentNo: 2022108,
+    //     branch: "MCA",
+    //     status: "Fulfilled"
+    //   }]);
 
       
       
@@ -59,12 +59,14 @@ export default function AdminDashboard(){
         if(currentUser.name==="Dean UG Office"){
           statusFilter = "Pending at Dean UG Office"
         } else if(currentUser.name==="Registrar Office"){
-          statusFilter = "Pending at Registrar Office";
+          statusFilter = "Pending at Registrar's Office";
           approved = "Approved";
           rejected = "Rejected";
         } else if(currentUser.name==="Dean PG Office"){
           statusFilter = "Pending at Dean PG Office"
-        } 
+        } else if(currentUser.name==="Controller of Examination"){
+          statusFilter = "Pending at Controller of Examination";
+        }
         else {
           statusFilter = "Pending at Department";
           departmentFilter = "Department of "
@@ -110,6 +112,8 @@ export default function AdminDashboard(){
           rejected = "Rejected"
         } else if(currentUser.name==="Dean PG Office"){
           statusFilter = "Pending at Dean PG Office"
+        } else if(currentUser.name==="Controller of Examination"){
+          statusFilter = "Pending at Controller of Examination";
         } 
         else {
           statusFilter = "Pending at Department";
@@ -140,7 +144,7 @@ export default function AdminDashboard(){
     return (
       <div className="adminDashboard">
         <div className="heading">
-        <h3>{currentUser.name}</h3>
+        <h2>{currentUser.name}</h2>
         </div>
         <div className="buttons">
                 <button className={degreeReq?"degreeButton active":"degreeButton"} onClick={()=>{setDegreeReq(true); fetchDegeeRequests()}}>Degree Requests</button>

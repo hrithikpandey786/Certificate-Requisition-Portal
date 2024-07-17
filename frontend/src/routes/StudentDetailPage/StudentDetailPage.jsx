@@ -42,10 +42,12 @@ function StudentDetailPage() {
         let updatedStatus;
         
         if(currentUser.name==="Dean UG Office" || currentUser.name==="Dean PG Office"){
-            updatedStatus = "Pending at Registrar Office"
+            updatedStatus = "Pending at Controller of Examination";
         } else if(currentUser.name==="Registrar Office"){
             updatedStatus = "Approved";
-        } 
+        } else if(currentUser.name==="Controller of Examination"){
+            updatedStatus = "Pending at Registrar's Office";
+        }
         else {
             if(studentInfo.course==="B.TECH" || studentInfo.course==="BBA" || studentInfo.course==="B.Pharma")
             updatedStatus = "Pending at Dean UG Office";
@@ -102,7 +104,10 @@ function StudentDetailPage() {
 
     return (
         <div className="studentDetailPageContainer">
-            <h2>Applicant for {type==="degree"?"Degree":"Migration"} Certificate</h2>
+            <div className="heading">
+                <h2>{currentUser.name}</h2>
+            </div>
+            <h3>Applicant for {type==="degree"?"Degree":"Migration"} Certificate</h3>
             <div className="student-info">
                 <div className="detailSection">
                     <div className="item">

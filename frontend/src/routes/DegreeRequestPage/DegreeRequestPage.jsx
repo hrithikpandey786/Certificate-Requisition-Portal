@@ -8,7 +8,7 @@ import Razorpay from "razorpay";
 function DegreeRequestPage() {
     const {updateUser} = React.useContext(AuthContext);
     const studentData = useLoaderData();
-    const [reappearance, setReappearance]= useState("no");
+    const [reappearance, setReappearance]= useState("No");
     const [error, setError] = React.useState("");
     const [isDisabled, setIsDisabled] = React.useState(false);
     const [isDateFilled, setIsDateFilled] = React.useState(false);
@@ -289,7 +289,7 @@ function DegreeRequestPage() {
                             name="reappearance"
                             disabled={studentInfo.request?true:false}
                             // value="yes"
-                            onClick={()=>setReappearance("yes")}
+                            onClick={()=>setReappearance("Yes")}
                             // onChange={handleChange}
                             required
                         />
@@ -302,7 +302,7 @@ function DegreeRequestPage() {
                                 name="reappearance"
                                 // value="no"
                                 disabled={studentInfo.request?true:false}
-                                onClick={()=>setReappearance("no")}
+                                onClick={()=>setReappearance("No")}
                                 // onChange={handleChange}
                                 required
                             />
@@ -318,7 +318,7 @@ function DegreeRequestPage() {
             </div>
             <div className="buttons">
                 <div className="degreeOptions">
-                    <button onClick={handlePayment} disabled={!isDateFilled || isDisabled}>Pay</button>
+                    <button onClick={handlePayment} disabled={!isDateFilled || isDisabled || isPaymentDone}>Pay</button>
                     {!studentInfo.request
                         ?<button onClick={handleSubmit} disabled={isDisabled || !isPaymentDone}>Submit</button>
                         :<button onClick={handleStatus} disabled={isDisabled}>Check Status</button>}                
