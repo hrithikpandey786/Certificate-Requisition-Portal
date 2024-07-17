@@ -180,6 +180,9 @@ function MigrationRequestPage() {
 
     return (
         <div className="migrationRequestContainer">
+            <div className="heading">
+            <h1>Certificate Requisition Portal</h1>
+            </div>
             <h2>Application for Migration Certificate</h2>
             <div className="student-info">
                 <div className="detailSection">

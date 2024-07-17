@@ -164,6 +164,9 @@ function DegreeRequestPage() {
 
     return (
         <div className="degreeRequestContainer">
+            <div className="heading">
+            <h1>Certificate Requisition Portal</h1>
+            </div>
             <h2>Application for Degree</h2>
             <div className="student-info">
                 <div className="detailSection">

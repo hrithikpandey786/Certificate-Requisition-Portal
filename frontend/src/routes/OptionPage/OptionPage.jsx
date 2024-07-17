@@ -31,6 +31,9 @@ export default function OptionPage(){
 
     return(
         <div className="optionPageContainer">
+            <div className="heading">
+            <h1>Certificate Requisition Portal</h1>
+            </div>
             <h2>Applying/Applied for</h2>
                 <Link to={`/degreeRequest/${id}`}>
                     <button>Degree</button>

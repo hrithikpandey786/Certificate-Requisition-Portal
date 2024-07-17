@@ -8,9 +8,19 @@
     height: calc(100vh - 60px); 
     padding-bottom: 60px; 
 
+    h1{
+        font-size: 35px;
+        color: #155ba7;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        margin: 10px;
+    
+    }
+
     h2{
-        margin: 10px auto;
-        font-size: 30px;
+        margin: 0px auto;
+        font-size: 25px;
     }
     .student-info{
         background-color: #f7f7f7;
