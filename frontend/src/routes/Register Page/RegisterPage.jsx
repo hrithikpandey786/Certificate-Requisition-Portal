@@ -62,6 +62,9 @@ export default function RegisterPage(){
     
         return (
             <div className="registerPage">
+                <div className="heading">
+                    <h1>Certificate Requisition Portal</h1>
+                </div>
                 <div className="formContainer">
                     <h2>Student Registration</h2>
                     <div className="wrapper">
