@@ -70,6 +70,7 @@ export default function RegisterPage(){
                     <div className="wrapper">
                     
                     <form onSubmit={handleSubmit}>
+                        <div className="input">
                         <div className="item">
                             <label htmlFor="name">Name:</label>
                             <input
@@ -195,9 +196,13 @@ export default function RegisterPage(){
                       <label htmlFor="female">Female</label><br></br>
                     </div>
                     </div>
+                        </div>
+                        
                     
-    
+                    <div className="button">
                     <button disabled={isDisabled}>Register</button>
+                    </div>
+                    
                 </form>
                 {error && <span>{error}</span>}
                     </div>
